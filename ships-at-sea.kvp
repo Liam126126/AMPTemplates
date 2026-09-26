@@ -33,15 +33,15 @@ App.BaseDirectory=./ships-at-sea/3951240/
 App.StoresSupported=None
 App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
-App.ExecutableWin=3951240\SasServer.exe
+App.ExecutableWin=3951240\SAS\Binaries\Win64\SasServer-Win64-Shipping.exe
 App.ExecutableLinux=/usr/bin/xvfb-run
-App.WorkingDir=3951240
-App.LinuxCommandLineArgs=-a wine SasServer.exe
+App.WorkingDir=3951240\SAS\Binaries\Win64
+App.LinuxCommandLineArgs=-a wine "./SasServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -nullrhi -log -stdout -FullStdOutLogOutput -port={{$GamePort}} -beaconport={{$QueryPort}}
+App.CommandLineArgs=-server {{$PlatformArgs}} -log -port={{$GamePort}} -beaconport={{$QueryPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"fixme-all,err+all"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
 App.CommandLineParameterFormat=+{0} {1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
