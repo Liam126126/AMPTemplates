@@ -34,14 +34,14 @@ App.StoresSupported=None
 App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
 App.ExecutableWin=3951240\SasServer.exe
-App.ExecutableLinux=/usr/bin/xvfb-run
+App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=3951240
-App.LinuxCommandLineArgs=-a wine "./SasServer.exe"
+App.LinuxCommandLineArgs=SasServer.exe
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -log -port={{$GamePort}} -beaconport={{$QueryPort}}
+App.CommandLineArgs={{$PlatformArgs}} -nullrhi -log -stdout -FullStdOutLogOutput -port={{$GamePort}} -beaconport={{$QueryPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"fixme-all,err+all"}
 App.CommandLineParameterFormat=+{0} {1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
