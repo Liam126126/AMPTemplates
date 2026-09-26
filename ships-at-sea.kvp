@@ -38,7 +38,7 @@ App.ExecutableLinux=/usr/bin/xvfb-run
 App.WorkingDir=3951240
 App.LinuxCommandLineArgs=-a wine "./SasServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs=-log -port={{$GamePort}} -beaconport={{$QueryPort}}
+App.CommandLineArgs={{$PlatformArgs}} -log -port={{$GamePort}} -beaconport={{$QueryPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
