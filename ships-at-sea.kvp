@@ -34,9 +34,9 @@ App.StoresSupported=None
 App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
 App.ExecutableWin=3951240\SasServer.exe
-App.ExecutableLinux=/usr/bin/wine
+App.ExecutableLinux=/usr/bin/xvfb-run
 App.WorkingDir=3951240
-App.LinuxCommandLineArgs=SasServer.exe
+App.LinuxCommandLineArgs=-a wine SasServer.exe
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -nullrhi -log -stdout -FullStdOutLogOutput -port={{$GamePort}} -beaconport={{$QueryPort}}
 App.UseLinuxIOREDIR=False
