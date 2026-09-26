@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": 7777,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Game Port"
+    },
+    {
+        "Protocol": "Both",
+        "Port": 15000,
+        "Ref": "QueryPort",
+        "Name": "Query Port",
+        "Description": "Query Port"
+    }
+]

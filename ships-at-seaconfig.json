@@ -1,0 +1,29 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "Ships At Sea",
+        "Subcategory": "Server:dns:1",
+        "Description": "Name displayed for the Ships At Sea server.",
+        "Keywords": "server,name",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "MaxLength": 64,
+        "ParamFieldName": "ServerName",
+        "DefaultValue": "My Ships At Sea Server",
+        "Placeholder": "{{$ServerName}}"
+    },
+    {
+        "DisplayName": "Max Players",
+        "Category": "Ships At Sea",
+        "Subcategory": "Server:dns:1",
+        "Description": "Maximum number of players.",
+        "Keywords": "max,players",
+        "FieldName": "MaxPlayers",
+        "InputType": "number",
+        "MinValue": 1,
+        "MaxValue": 16,
+        "ParamFieldName": "MaxPlayers",
+        "DefaultValue": "16",
+        "Placeholder": "16"
+    }
+]
