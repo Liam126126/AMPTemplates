@@ -11,7 +11,7 @@ Meta.ConfigManifest=ships-at-seaconfig.json
 Meta.MetaConfigManifest=ships-at-seametaconfig.json
 Meta.ConfigRoot=ships-at-sea.kvp
 Meta.MinAMPVersion=2.8.0.4
-Meta.SpecificDockerImage=cubecoders/ampbase:wine
+Meta.SpecificDockerImage=cubecoders/ampbase:xvfb
 Meta.DockerRequired=False
 Meta.DockerBaseReadOnly=False
 Meta.ContainerPolicy=Supported
@@ -34,11 +34,11 @@ App.StoresSupported=None
 App.StoreSpecificSettings={}
 App.StoreDownloadLocations={}
 App.ExecutableWin=3951240\SasServer.exe
-App.ExecutableLinux=/usr/bin/wine
+App.ExecutableLinux=/usr/bin/xvfb-run
 App.WorkingDir=3951240
-App.LinuxCommandLineArgs="./SasServer.exe"
+App.LinuxCommandLineArgs=-a wine "./SasServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs=-log -port={{$GamePort}} -queryport={{$QueryPort}}
+App.CommandLineArgs=-log -port={{$GamePort}} -beaconport={{$QueryPort}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"3951240","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}

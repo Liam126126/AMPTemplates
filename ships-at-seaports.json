@@ -11,6 +11,6 @@
         "Port": 15000,
         "Ref": "QueryPort",
         "Name": "Query Port",
-        "Description": "Query Port"
+        "Description": "Beacon Port"
     }
 ]
