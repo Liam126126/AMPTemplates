@@ -6,6 +6,6 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "3951240",
         "UpdateSourceArgs": "3951240",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Linux"
     }
 ]
